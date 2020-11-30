@@ -2,6 +2,9 @@ sudo: true
 # Use C as a dummy language to avoid Travis-CI setting up a virtualenv
 # for us, etc.
 language: c
+arch:
+  - amd64
+  - ppc64le
 before_install:
   # Remove some packages that actively depend on locales working properly.
   - sudo apt-get --quiet=2 remove postgresql-9.1 postgresql-contrib-9.1 postgresql-9.2 postgresql-contrib-9.2 postgresql-9.3 postgresql-contrib-9.3 postgresql-9.4 postgresql-contrib-9.4 >/dev/null
